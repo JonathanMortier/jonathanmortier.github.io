@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Yummy Theme # ex. I m Chuan
-name: Your Name # ex. DONGChuan
-email: my_email_address@lalala.com
-location: My location # ex. Nice, France
-company: MyCompany
-company_url: my_company_website
-github_url: my_github_url # ex. https://github.com/DONGChuan
+title:  # ex. I m Chuan
+name: Jonathan Mortier # ex. DONGChuan
+email: mmortierjo@gmail.com
+location: Paris, France # ex. Nice, France
+company: Harmonie mutuelle
+company_url: http://www.harmonie-mutuelle.fr
+github_url: https://github.com/JonathanMortier # ex. https://github.com/DONGChuan
 description: description_of_your_web_site
 favicon: favicon.png # Image must be in assets/images
 
@@ -72,7 +72,7 @@ navs:
 
   -
     href: /about
-    label: About
+    label: A propos
 
 # Sidebar to show popular repo
 side_bar_repo_limit: 5 # Number of repos to show
@@ -85,7 +85,7 @@ analytics :
 
 
 # For about.html. Fell free to create your own!
-skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
-skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
-skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
-skill_mobile_app_keywords: [Android, Sketch UI Desgin]
+skill_software_keywords: [Java, C, C++, MySQL, Oracle, SQLite]
+skill_j2ee_keywords: [Spring, JSF, ]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, PHP]
+skill_mobile_app_keywords: [Android]

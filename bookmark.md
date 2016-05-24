@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bookmarks
-subtitle: <span class="mega-octicon octicon-repo"></span>&nbsp;&nbsp; To mark useful libs - tools - books
+subtitle: <span class="mega-octicon octicon-repo"></span>&nbsp;&nbsp; Liens utils, outils ...
 menu: Bookmark
 ---
 
@@ -15,16 +15,6 @@ menu: Bookmark
 - [Universal-Image-Loader](https://github.com/nostra13/Android-Universal-Image-Loader) - Powerful and flexible library for loading, caching and displaying images
 - [greenDAO](http://greendao-orm.com/) - greenDAO is a light and fast ORM solution that maps objects to SQLite databases
 - [EventBus](http://greenrobot.github.io/EventBus/) - Android optimized event bus that simplifies communication
-
-## PHP
-- [Idiorm](https://github.com/j4mie/idiorm/) - A lightweight nearly-zero-config object-relational mapper and fluent query builder for PHP5
-- [GitElephant](https://github.com/matteosister/GitElephant) - An abstraction layer to manage your git repositories with php
-- [Propel](https://github.com/propelorm/Propel) - ORM for PHP5
-- [SimpleDOM](https://code.google.com/archive/p/simpledom/) - Built upon SimpleXML and provids DOM methods using SimpleXML's syntax.
-
-### Symfony
-- [NelmioApiDocBundle](https://github.com/nelmio/NelmioApiDocBundle) - Generate a decent documentation for your APIs
-- [FOSRestBundle](http://symfony.com/doc/current/bundles/FOSRestBundle/index.html) - Creat a REST API with Symfony2
 
 ## Javascript
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
@@ -51,9 +41,9 @@ menu: Bookmark
 
 ## CSS
 - [loaders.css](https://connoratherton.com/loaders) - Delightful and performance-focused pure css loading animations
-- [Load Awesome](http://github.danielcardoso.net/load-awesome/animations.html) - Pure CSS Loaders and Spinners 
+- [Load Awesome](http://github.danielcardoso.net/load-awesome/animations.html) - Pure CSS Loaders and Spinners
 - [Hover.css](http://ianlunn.github.io/Hover/) - Collection of CSS3 powered hover effects
-- [Animate.css](https://github.com/daneden/animate.css) - Bunch of cool, fun, and cross-browser animation. 
+- [Animate.css](https://github.com/daneden/animate.css) - Bunch of cool, fun, and cross-browser animation.
 
 ## Front-end web UI/Framework
 - [Bootstrap](http://getbootstrap.com/) - HTML, CSS, and JS framework for developing responsive, mobile first projects on the web
