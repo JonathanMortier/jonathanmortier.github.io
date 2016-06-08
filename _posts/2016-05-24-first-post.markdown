@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Permier post !"
+title:  "Premier post !"
 date:   2016-05-24 11:25:35 +0200
 categories: jekyll cv
 ---
