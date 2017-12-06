@@ -17,19 +17,15 @@ menu: Bookmark
 - [EventBus](http://greenrobot.github.io/EventBus/) - Android optimized event bus that simplifies communication
 
 ## Javascript
-- [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
-- [lunr.js](http://lunrjs.com/) - Simple full-text search
-- [Trip.js](http://eragonj.github.io/Trip.js/index.html) - Help you customize a tutorial trip easily with more flexibilities
 - [Moment.js](http://momentjs.com/) - Parse, validate, manipulate, and display dates in JavaScript.
-- [Underscore.js](http://underscorejs.org/) - It provides a whole mess of useful functional programming helpers without extending any built-in objects.
+- [JSON Web Token](https://jwt.io/) - JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
 
-### AngularJs
-- [Protractor](http://angular.github.io/protractor) - End-to-end test framework for AngularJS applications
-- [angular-media-player](https://github.com/colthreepv/angular-media-player) - Directive for audio and video
+### Angular
+- [Protractor](http://angular.github.io/protractor) - End-to-end test framework for Angular applications
 - [Smart table](http://lorenzofox3.github.io/smart-table-website/) - Module to easily display data in a table
 - [ng-table](http://esvit.github.io/ng-table/#/) - Module to easily display data in a table
 - [ngToast](https://github.com/tameraydin/ngToast) - AngularJS toast
-- [ANGM-GENERATOR](http://newaeonweb.com.br/generator-angm/) - AngularJS Yeoman Generator
+- [Angular-cli](https://cli.angular.io/) - Generate angular project
 
 ### Node.js
 - [utility](https://github.com/node-modules/utility) - A collection of useful utilities
