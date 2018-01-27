@@ -85,7 +85,7 @@ analytics :
 
 
 # For about.html. Fell free to create your own!
-skill_software_keywords: [Java, C, C++, MySQL, Oracle, SQLite]
-skill_j2ee_keywords: [Spring, JSF, ]
+skill_software_keywords: [Java, Angular, C, C++, MySQL, Oracle, SQLite]
+skill_j2ee_keywords: [Spring, Spring Boot, JSF]
 skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, PHP]
-skill_mobile_app_keywords: [Android]
+skill_mobile_app_keywords: [Android, Ionic]
