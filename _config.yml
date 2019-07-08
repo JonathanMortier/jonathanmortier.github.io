@@ -9,11 +9,11 @@
 title:  # ex. I m Chuan
 name: Jonathan Mortier # ex. DONGChuan
 email: mortierjo@gmail.com
-location: Paris, France # ex. Nice, France
-company: Harmonie mutuelle
-company_url: http://www.harmonie-mutuelle.fr
+location: Niort, France # ex. Nice, France
+company: Netresto
+company_url: http://www.netresto.com/
 github_url: https://github.com/JonathanMortier # ex. https://github.com/DONGChuan
-description: description_of_your_web_site
+description: Solutions RH, HACCP et plus pour la restauration
 favicon: favicon.png # Image must be in assets/images
 
 # The base hostname & protocol for your site
