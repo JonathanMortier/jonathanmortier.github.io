@@ -13,7 +13,7 @@ sudo update-alternatives --config java
 Ensuite, vous avez juste à sélectionner la version que vous souhaitez utiliser et les liens symboliques seront modifiés automatiquement.
 
 ```bash
-Il existe 2 choix pour l'alternative java (qui fournit /usr/bin/java).
+Il existe 2 choix pour l\'alternative java (qui fournit /usr/bin/java).
 
   Sélection   Chemin                                               Priorité  État
 ------------------------------------------------------------
