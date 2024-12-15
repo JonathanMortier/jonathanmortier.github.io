@@ -10,10 +10,10 @@ title:  # ex. I m Chuan
 name: Jonathan Mortier # ex. DONGChuan
 email: mortierjo@gmail.com
 location: Niort, France # ex. Nice, France
-company: Netresto
-company_url: http://www.netresto.com/
+company: Wekey
+company_url: https://wekey.fr/
 github_url: https://github.com/JonathanMortier # ex. https://github.com/DONGChuan
-description: Solutions RH, HACCP et plus pour la restauration
+description: Cabinet de conseil en transformation digitale
 favicon: favicon.png # Image must be in assets/images
 
 # The base hostname & protocol for your site
