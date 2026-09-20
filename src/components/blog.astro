@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+const fmt = (d: Date) =>
+  d.toLocaleDateString("fr-FR", { year: "numeric", month: "long", day: "numeric" });
+---
+
+<section id="blog" class="py-12 border-t border-[var(--line-soft)] text-[var(--white)]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Notes & astuces</h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Blog</h3>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {
+        posts.map((post) => (
+          <li>
+            <a
+              href={`/blog/${post.id}/`}
+              class="block h-full p-5 rounded-2xl border border-[var(--white-icon-tr)] bg-[var(--card-bg)] hover:bg-[var(--white-icon-tr)] transition"
+            >
+              <time class="text-sm text-[var(--white-icon)]">{fmt(post.data.date)}</time>
+              <h4 class="text-lg font-semibold mt-1">{post.data.title}</h4>
+              <div class="flex flex-wrap gap-2 mt-3">
+                {post.data.tags.map((t) => (
+                  <span class="text-xs px-2 py-1 rounded-full border border-[var(--white-icon-tr)] text-[var(--white-icon)]">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <a
+      href="/blog/"
+      class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-[var(--white-strong)] transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[var(--card-bg)] hover:bg-[var(--white-icon-tr)] hover:scale-105"
+    >
+      <span class="md:text-lg text-md">Tous les articles</span>
+    </a>
+  </div>
+</section>

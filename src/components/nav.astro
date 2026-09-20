@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
   },
   {
     label: "Blog",
-    href: "/blog/",
+    href: "/#blog",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM4 5V19H20V5H4ZM6 7H12V13H6V7ZM8 9V11H10V9H8ZM14 9H18V11H14V9ZM6 15H18V17H6V15ZM14 12H18V14H14V12Z"></path></svg>`,
   },
   {
@@ -182,9 +182,6 @@ const navItems: NavItem[] = [
     } catch (e) {}
   });
 
-  if (location.pathname.startsWith("/blog")) {
-    document.querySelector('nav a[href="/blog/"]')?.classList.add("active");
-  }
 
   document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
