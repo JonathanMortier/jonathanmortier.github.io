@@ -3,6 +3,7 @@
 interface Project {
   title: string;
   image: string;
+  alt: string;
   link: string;
   preview: string;
   status: string;
@@ -11,25 +12,28 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Web Crypto",
-    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Web+Crypto",
+    image: "/projects/webcrypto.webp",
+    alt: "Capture de CryptoWatch, le tableau de bord de suivi des cryptomonnaies",
     link: "https://github.com/JonathanMortier/webcrypto",
     preview: "https://webcrypto-seven.vercel.app/",
     status: "Suivi de cryptos",
   },
   {
     title: "Patrimoine",
-    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Patrimoine",
+    image: "/projects/patrimoine.webp",
+    alt: "Patrimoine, application de suivi de patrimoine en TypeScript et Python",
     link: "https://github.com/JonathanMortier/patrimoine",
     preview: "https://patrimoine-kohl.vercel.app/",
     status: "Suivi de patrimoine",
   },
   {
     title: "Rentila Automate",
-    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Rentila+Automate",
+    image: "/projects/rentila-automate.webp",
+    alt: "Rentila Automate, automatisation d'envoi de quittances de loyer en TypeScript",
     link: "https://github.com/JonathanMortier/rentila-automate",
     preview: "https://github.com/JonathanMortier/rentila-automate",
-    status: "Automatisation d'envoi de quittance de loyeer",
-  }
+    status: "Automatisation d'envoi de quittances de loyer",
+  },
 ];
 ---
 
@@ -38,29 +42,36 @@ const projects: Project[] = [
   class="py-12 border-t border-[var(--line-soft)] text-[var(--white)]"
 >
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Mes réalisations</h2>
-    <h3 class="text-4xl md:text-5xl font-medium mb-8">Projets</h3>
+    <p class="text-lg text-[var(--sec)] mb-2 shiny-sec">Mes réalisations</p>
+    <h2 class="text-4xl md:text-5xl font-medium mb-8">Projets</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
         projects.map((project) => (
           <div class="group">
-            <a
-              href={project.preview}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block"
-            >
-              <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
+            <div>
+              <a
+                href={project.preview}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block"
+                aria-label={`Voir ${project.title}`}
+              >
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </a>
               <div class="flex items-center px-3">
                 <div class="flex-grow">
-                  <h4 class="text-2xl font-semibold">{project.title}</h4>
+                  <h3 class="text-2xl font-semibold">{project.title}</h3>
                   <span class="py-1 text-sm text-[var(--white-icon)]">
                     {project.status}
                   </span>
@@ -69,7 +80,7 @@ const projects: Project[] = [
                   <a
                     target="_blank"
                     href={project.link}
-                    aria-label="GitHub"
+                    aria-label={`Code source de ${project.title} sur GitHub`}
                     class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-[var(--white-strong)] transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[var(--card-bg)] hover:bg-[var(--white-icon-tr)]"
                   >
                     <svg
@@ -84,7 +95,7 @@ const projects: Project[] = [
                   <a
                     target="_blank"
                     href={project.preview}
-                    aria-label="Preview"
+                    aria-label={`Ouvrir ${project.title}`}
                     class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-[var(--white-strong)] transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[var(--card-bg)] hover:bg-[var(--white-icon-tr)]"
                   >
                     <svg
@@ -98,7 +109,7 @@ const projects: Project[] = [
                   </a>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         ))
       }
@@ -106,7 +117,7 @@ const projects: Project[] = [
     <a
       target="_blank"
       href="https://github.com/JonathanMortier"
-      aria-label="GitHub"
+      aria-label="Plus de projets sur GitHub"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-[var(--white-strong)] transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[var(--card-bg)] hover:bg-[var(--white-icon-tr)] hover:scale-105"
     >
       <span class="md:text-lg text-md">Plus de projets sur</span>

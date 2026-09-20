@@ -36,9 +36,9 @@ const SkillsList = () => {
 
   return (
     <div className="text-left pt-3 md:pt-9">
-      <h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
+      <h2 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
         Ce que je fais
-      </h3>
+      </h2>
       <ul className="space-y-4 mt-4 text-lg">
         {Object.entries(skills).map(([category, items]) => (
           <li key={category} className="w-full">
@@ -76,10 +76,10 @@ const SkillsList = () => {
               >
                 <ul className="space-y-2 text-[var(--white-icon)] text-sm">
                   {items.map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <span className="pl-1">•</span>
-                      <li className="pl-3">{item}</li>
-                    </div>
+                    <li key={index} className="flex items-center">
+                      <span className="pl-1" aria-hidden="true">•</span>
+                      <span className="pl-3">{item}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
