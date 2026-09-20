@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from "astro:content";
+import BlogLayout from "@/layouts/BlogLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.date.toLocaleDateString("fr-FR", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<BlogLayout title={post.data.title}>
+  <a href="/blog/" class="text-sm text-[var(--white-icon)] hover:text-[var(--white-strong)]">← Retour au blog</a>
+  <h1 class="text-3xl md:text-4xl font-medium mt-4 mb-2">{post.data.title}</h1>
+  <time class="text-sm text-[var(--white-icon)]">{date}</time>
+  <article class="prose-blog mt-8">
+    <Content />
+  </article>
+</BlogLayout>
+
+<style is:global>
+  .prose-blog > * + * { margin-top: 1rem; }
+  .prose-blog h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; }
+  .prose-blog h3 { font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; }
+  .prose-blog a { color: var(--sec); text-decoration: underline; }
+  .prose-blog ul { list-style: disc; padding-left: 1.5rem; }
+  .prose-blog ol { list-style: decimal; padding-left: 1.5rem; }
+  .prose-blog code { font-family: ui-monospace, monospace; font-size: 0.9em; }
+  .prose-blog :not(pre) > code { background: var(--white-icon-tr); padding: 0.1rem 0.35rem; border-radius: 0.35rem; }
+  .prose-blog pre { padding: 1rem; border-radius: 0.75rem; overflow-x: auto; border: 1px solid var(--white-icon-tr); }
+  .prose-blog pre code, .prose-blog pre code * { font-family: ui-monospace, monospace; }
+  .prose-blog img { max-width: 100%; border-radius: 0.75rem; }
+  .prose-blog blockquote { border-left: 3px solid var(--sec); padding-left: 1rem; color: var(--white-icon); }
+</style>

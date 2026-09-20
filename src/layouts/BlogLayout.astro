@@ -1,0 +1,18 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav.astro";
+import Footer from "@/components/footer.astro";
+
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <Nav />
+  <main class="max-w-3xl mx-auto pt-28 md:pt-36 pb-14 text-[var(--white)]">
+    <slot />
+  </main>
+  <Footer />
+</Layout>

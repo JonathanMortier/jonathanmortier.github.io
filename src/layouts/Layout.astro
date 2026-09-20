@@ -10,7 +10,7 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{title} </title>
+    <title>{title} | Jonathan Mortier</title>
     <meta
       name="description"
       content="Jonathan Mortier - Développeur Java / Angular à Niort, chez Wekey."
@@ -47,6 +47,12 @@ const { title } = Astro.props;
     />
 
     <!-- Structured Data (JSON-LD) -->
+    <script is:inline>
+      try {
+        const t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -80,12 +86,44 @@ const { title } = Astro.props;
   }
 
   :root {
+    color-scheme: dark;
     --background: #101010;
     --sec: #a476ff;
     --white: #dfdfdf;
+    --white-strong: #ffffff;
     --white-icon: #f3f3f398;
     --white-icon-tr: #f3f3f310;
+    --card-bg: #1414149c;
+    --component-bg: #141414cc;
+    --line-soft: #ffffff10;
+    --glow: rgba(0, 0, 0, 0.8);
+    --footer-icon-filter: brightness(0) invert(1);
   }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --background: #f6f5f9;
+    --sec: #6d3fd6;
+    --white: #1f1d29;
+    --white-strong: #000000;
+    --white-icon: #1f1d29a6;
+    --white-icon-tr: #1f1d2914;
+    --card-bg: #ffffffb3;
+    --component-bg: #ffffffcc;
+    --line-soft: #1f1d2914;
+    --glow: rgba(255, 255, 255, 0.8);
+    --footer-icon-filter: brightness(0);
+  }
+
+  :root[data-theme="light"] .shiny-sec {
+    background: linear-gradient(135deg, #6d3fd6 25%, #b79cf2 50%, #6d3fd6 75%);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .invert { filter: var(--footer-icon-filter) !important; }
 
   * {
     font-family:
