@@ -16,7 +16,13 @@ const date = post.data.date.toLocaleDateString("fr-FR", {
 });
 ---
 
-<BlogLayout title={post.data.title}>
+<BlogLayout
+  title={`${post.data.title} | Jonathan Mortier`}
+  description={post.data.description}
+  type="article"
+  publishedTime={post.data.date}
+  tags={post.data.tags}
+>
   <a href="/blog/" class="text-sm text-[var(--white-icon)] hover:text-[var(--white-strong)]">← Retour au blog</a>
   <h1 class="text-3xl md:text-4xl font-medium mt-4 mb-2">{post.data.title}</h1>
   <time class="text-sm text-[var(--white-icon)]">{date}</time>

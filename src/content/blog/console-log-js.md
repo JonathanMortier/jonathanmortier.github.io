@@ -1,5 +1,6 @@
 ---
 title: "Les pouvoirs (cachés) de console.log"
+description: "Les fonctions cachées de console.log en JavaScript pour améliorer la gestion des logs dans la console."
 date: 2018-10-18
 tags: ["log", "JavaScript"]
 ---

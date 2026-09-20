@@ -1,5 +1,6 @@
 ---
 title: "Changer de version de Java rapidement"
+description: "Changer rapidement de version de Java sur Ubuntu avec une seule commande."
 date: 2019-07-08
 tags: ["Java", "Ubuntu"]
 ---

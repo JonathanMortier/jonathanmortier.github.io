@@ -1,5 +1,6 @@
 ---
 title: "Premier post !"
+description: "Premier article : bienvenue sur mon site hébergé sur GitHub Pages."
 date: 2016-05-24
 tags: ["jekyll", "cv"]
 ---

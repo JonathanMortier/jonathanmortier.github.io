@@ -1,5 +1,6 @@
 ---
 title: "Import classes from a jar with Maven"
+description: "Importer des classes spécifiques d'un jar avec Maven grâce aux overlays du maven-war-plugin."
 date: 2016-06-08
 tags: ["maven", "java"]
 ---

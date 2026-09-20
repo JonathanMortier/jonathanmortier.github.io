@@ -1,5 +1,6 @@
 ---
 title: "Exporter un stash dans un fichier"
+description: "Exporter un git stash dans un fichier patch pour continuer un développement sur un autre poste."
 date: 2019-04-10
 tags: ["Git"]
 ---

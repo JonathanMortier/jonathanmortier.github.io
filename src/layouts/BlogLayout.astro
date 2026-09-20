@@ -5,11 +5,15 @@ import Footer from "@/components/footer.astro";
 
 interface Props {
   title: string;
+  description?: string;
+  type?: "website" | "article";
+  publishedTime?: Date;
+  tags?: string[];
 }
-const { title } = Astro.props;
+const props = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout {...props}>
   <Nav />
   <main class="max-w-3xl mx-auto pt-28 md:pt-36 pb-14 text-[var(--white)]">
     <slot />
