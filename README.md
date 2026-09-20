@@ -1,11 +1,12 @@
-Site perso généré à partir du projet de DONG Chuan [Yummi Jekyll](https://github.com/DONGChuan/Yummy-Jekyll)
+# jonathanmortier.github.io
 
-## License
+Site perso, basé sur le thème [Dark Minimal](https://github.com/Gothsec/dark-minimal) (Astro + Tailwind, licence MIT, voir `LICENSE-darkminimal`).
 
-The Apache License 2.0
+```bash
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # sortie dans dist/
+```
 
-Copyright (c) 2016 DONG Chuan
-
-Check [LICENSE](https://github.com/DONGChuan/DONGChuan.github.io/blob/master/LICENSE) file and [official website](http://www.apache.org/licenses/LICENSE-2.0) for details
-
-Installation
+Déploiement GitHub Pages via `.github/workflows/deploy.yml` (Settings → Pages → Source : GitHub Actions).
+Le CV est dans `public/cv/`. L'ancien site Jekyll reste dans l'historique de `master`.
