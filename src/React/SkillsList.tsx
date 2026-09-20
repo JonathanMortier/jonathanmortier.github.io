@@ -18,15 +18,15 @@ const SkillsList = () => {
   const skills = {
     "Web & Backend": [
       "Java, Spring, Spring Boot",
-      "Angular, React, HTML, CSS, JS, jQuery",
-      "Bases de données : MySQL, Oracle, MongoDb, SQLite",
+      "Angular, React, HTML, CSS, JavaScript, jQuery",
+      "Bases de données : MySQL, Oracle, MongoDB, SQLite",
     ],
     "Mobile": [
       "Android",
       "Ionic",
     ],
     "Langages": [
-      "Langages : Java, Javascript",
+      "Java, JavaScript, TypeScript",
     ],
   };
 
@@ -37,7 +37,7 @@ const SkillsList = () => {
   return (
     <div className="text-left pt-3 md:pt-9">
       <h2 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
-        Ce que je fais
+        Compétences
       </h2>
       <ul className="space-y-4 mt-4 text-lg">
         {Object.entries(skills).map(([category, items]) => (
