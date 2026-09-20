@@ -17,16 +17,16 @@ const SkillsList = () => {
 
   const skills = {
     "Web & Backend": [
-      "Java, Spring, Spring Boot, JSF",
-      "Angular, HTML, CSS, JS, jQuery, Ajax, PHP",
-      "Bases de données : MySQL, Oracle, SQLite",
+      "Java, Spring, Spring Boot",
+      "Angular, React, HTML, CSS, JS, jQuery",
+      "Bases de données : MySQL, Oracle, MongoDb, SQLite",
     ],
     "Mobile": [
       "Android",
       "Ionic",
     ],
     "Langages": [
-      "Langages : Java, C, C++",
+      "Langages : Java, Javascript",
     ],
   };
 
