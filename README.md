@@ -58,3 +58,4 @@ public/
 GitHub Actions (`.github/workflows/deploy.yml`) build et déploie sur GitHub Pages à chaque push sur `main` (Settings → Pages → Source : GitHub Actions).
 
 `master` contient l'historique de l'ancien site (Jekyll), non déployé.
+<!-- test protection 1793299241 -->
