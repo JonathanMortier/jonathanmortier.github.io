@@ -77,7 +77,14 @@ const navItems: NavItem[] = [
 </style>
 <style>
   nav {
-    transform: translateX(-50%);
+    /*
+     * Pas de transform ici: le décalage horizontal vient déjà de la
+     * classe Tailwind -translate-x-1/2 sur <nav>. Sous Tailwind v4, les
+     * utilitaires translate-*/scale-*/rotate-* utilisent la propriété CSS
+     * native `translate` (distincte de `transform`) — les deux se
+     * cumulent si elles sont définies toutes les deux, ce qui doublait
+     * le décalage et poussait le menu hors de l'écran.
+     */
     background-color: var(--background);
     transition:
       background-color 0.3s ease,
@@ -92,7 +99,11 @@ const navItems: NavItem[] = [
   }
 
   nav a.active .nav-indicator {
-    transform: translateY(-50%) scale(1);
+    /* Mêmes propriétés natives que les classes Tailwind -translate-y-1/2
+       et scale-0 du point par défaut, pour remplacer leur valeur plutôt
+       que s'y ajouter (voir note plus haut sur transform vs translate). */
+    translate: 0 -50%;
+    scale: 1;
     opacity: 1;
   }
 
@@ -103,7 +114,6 @@ const navItems: NavItem[] = [
   @media (max-width: 767px) {
     nav {
       width: 100% !important;
-      transform: translateX(-50%);
       bottom: 0;
       left: 50%;
       position: fixed;
