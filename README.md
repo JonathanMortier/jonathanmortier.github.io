@@ -34,6 +34,7 @@ src/
   pages/         Routes : accueil, /blog/, /blog/[slug]/, /rss.xml
   content/blog/  Articles de blog (Markdown, collection Astro)
   React/         Composants interactifs (SkillsList)
+  styles/        global.css (point d'entrée Tailwind CSS v4, importé par Layout.astro)
 public/
   cv/            CV en PDF
   projects/      Images de couverture des projets
